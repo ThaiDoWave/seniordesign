@@ -3,7 +3,10 @@
  * and open the template in the editor.
  */
 package my.MuZikGui2;
-
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*; 
 /**
  *
  * @author Thai
@@ -26,6 +29,7 @@ public class MuZikUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu2 = new javax.swing.JPopupMenu();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -168,5 +172,6 @@ public class MuZikUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPopupMenu jPopupMenu2;
     // End of variables declaration//GEN-END:variables
 }
