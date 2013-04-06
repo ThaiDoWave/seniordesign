@@ -38,14 +38,14 @@ public class MuZikUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Record / Playback");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(450, 90, 73, 23);
+        jButton1.setBounds(350, 40, 260, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/MuZikGui2/treble.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -59,9 +59,9 @@ public class MuZikUI extends javax.swing.JFrame {
      * pops up. MUST MAKE NEW PACKAGE TO USE METHODS FROM OTHER CLASSES...
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JFrame frame = new PlayMidi();
-        frame.pack();
-        frame.show();
+        JFrame RecordPlayback = new PlayMidi();
+        RecordPlayback.pack();
+        RecordPlayback.show();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
