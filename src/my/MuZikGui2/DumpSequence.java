@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package my.MuZikGui2;
- 
+ /**/
 import java.io.*; 
 
 import javax.sound.midi.MidiSystem;
