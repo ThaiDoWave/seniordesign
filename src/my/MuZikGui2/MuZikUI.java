@@ -56,7 +56,7 @@ public class MuZikUI extends javax.swing.JFrame {
 
     /**
      * This allows the button to be pressed, and the recording option 
-     * pops up. MUST MAKE NEW PACKAGE TO USE METHODS FROM OTHER CLASSES.
+     * pops up. MUST MAKE NEW PACKAGE TO USE METHODS FROM OTHER CLASSES..
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JFrame frame = new PlayMidi();
