@@ -210,7 +210,7 @@ PrintStream printStream = new PrintStream(new FileOutputStream(fileName, append)
         private static class OutputStream {
     
              public void myMethod() {
-              String file = "whatever.txt";
+              String file = "whatever.txt"; /* need to change to change file name*/ 
                try {
                    outStr= new FileOutputStream(file, true); 
                } catch(FileNotFoundException fnfe) { 
