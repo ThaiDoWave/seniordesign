@@ -3,10 +3,13 @@
  * and open the template in the editor.
  */
 package my.MuZikGui2;
+
+import PlayMidi.PlayMidi;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*; 
+import javax.swing.*;
+
 /**
  *
  * @author Thai
@@ -29,10 +32,20 @@ public class MuZikUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(450, 90, 73, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/MuZikGui2/treble.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -40,6 +53,17 @@ public class MuZikUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * This allows the button to be pressed, and the recording option 
+     * pops up. MUST MAKE NEW PACKAGE TO USE METHODS FROM OTHER CLASSES.
+     */
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JFrame frame = new PlayMidi();
+        frame.pack();
+        frame.show();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -76,6 +100,7 @@ public class MuZikUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

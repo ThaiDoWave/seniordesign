@@ -1,3 +1,5 @@
+package PlayMidi;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -151,7 +153,10 @@ public class PlayMidi extends JFrame {
     return new AudioFormat(sampleRate, 
       sampleSizeInBits, channels, signed, bigEndian);
   }
-
+public static void closing(){
+System.exit(0);
+}
+  
   public static void main(String args[]) {
     JFrame frame = new PlayMidi();
     frame.pack();
