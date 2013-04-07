@@ -21,6 +21,7 @@ public class MuZikUI extends javax.swing.JFrame {
      */
     public MuZikUI() {
         initComponents();
+        
     }
 
     /**
@@ -85,7 +86,7 @@ public class MuZikUI extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, -40, 800, 680);
 
-        pack();
+        setBounds(0, 0, 816, 638);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -142,6 +143,7 @@ public class MuZikUI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MuZikUI().setVisible(true);
+                
             }
         });
     }
