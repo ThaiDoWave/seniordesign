@@ -45,11 +45,11 @@ public class MuZikUI extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(350, 40, 260, 40);
+        jButton1.setBounds(250, 30, 200, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/MuZikGui2/treble.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/MuZikGui2/MuzikInterfaceUpdated.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 700, 400);
+        jLabel1.setBounds(0, -40, 800, 680);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -12,14 +12,20 @@ public class PlayMidi extends JFrame {
   ByteArrayOutputStream out;
 
   public PlayMidi() {
-    super("Capture Sound Demo");
+    super("Record / Playback");
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     Container content = getContentPane();
+    
+    Font bBold = new Font("Times New Roman", Font.BOLD, 50);
 
     final JButton capture = new JButton("Capture");
     final JButton stop = new JButton("Stop");
     final JButton play = new JButton("Play");
 
+    capture.setFont(bBold);
+    stop.setFont(bBold);
+    play.setFont(bBold);
+    
     capture.setEnabled(true);
     stop.setEnabled(false);
     play.setEnabled(false);
