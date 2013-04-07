@@ -18,7 +18,7 @@ public class PlayMidi extends JFrame {
     
     Font bBold = new Font("Times New Roman", Font.BOLD, 50);
 
-    final JButton capture = new JButton("Capture");
+    final JButton capture = new JButton("Record");
     final JButton stop = new JButton("Stop");
     final JButton play = new JButton("Play");
 
