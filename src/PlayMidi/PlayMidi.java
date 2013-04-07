@@ -13,7 +13,7 @@ public class PlayMidi extends JFrame {
 
   public PlayMidi() {
     super("Record / Playback");
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     Container content = getContentPane();
     
     Font bBold = new Font("Times New Roman", Font.BOLD, 50);
