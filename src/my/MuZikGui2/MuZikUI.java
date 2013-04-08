@@ -97,6 +97,7 @@ public class MuZikUI extends javax.swing.JFrame {
         JFrame RecordPlayback = new PlayMidi();
         RecordPlayback.pack();
         RecordPlayback.show();
+        RecordPlayback.setLocationRelativeTo(null);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -142,7 +143,7 @@ public class MuZikUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MuZikUI().setVisible(true);
+               new MuZikUI().setVisible(true);
                 
             }
         });
