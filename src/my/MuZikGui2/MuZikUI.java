@@ -33,64 +33,64 @@ public class MuZikUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        bRP = new javax.swing.JButton();
+        bPPE = new javax.swing.JButton();
+        bSL = new javax.swing.JButton();
+        bSS = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        File = new javax.swing.JMenu();
+        New = new javax.swing.JMenuItem();
+        Open = new javax.swing.JMenuItem();
+        Edit = new javax.swing.JMenu();
+        Options = new javax.swing.JMenu();
+        RP = new javax.swing.JMenuItem();
+        PPE = new javax.swing.JMenuItem();
+        SL = new javax.swing.JMenuItem();
+        SS = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("Record / Playback");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        bRP.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        bRP.setText("Record / Playback");
+        bRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bRPActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(250, 30, 200, 40);
+        getContentPane().add(bRP);
+        bRP.setBounds(250, 30, 200, 40);
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setText("Post-Play Evaluation");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        bPPE.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        bPPE.setText("Post-Play Evaluation");
+        bPPE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                bPPEActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(490, 30, 200, 40);
+        getContentPane().add(bPPE);
+        bPPE.setBounds(490, 30, 200, 40);
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton3.setText("Song Lessons");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        bSL.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        bSL.setText("Song Lessons");
+        bSL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                bSLActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(250, 90, 200, 40);
+        getContentPane().add(bSL);
+        bSL.setBounds(250, 90, 200, 40);
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton4.setText("Song Sharing");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        bSS.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        bSS.setText("Song Sharing");
+        bSS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                bSSActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(490, 90, 200, 40);
+        getContentPane().add(bSS);
+        bSS.setBounds(490, 90, 200, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/MuZikGui2/MuzikInterfaceUpdated.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -98,44 +98,49 @@ public class MuZikUI extends javax.swing.JFrame {
 
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jMenu1.setText("File");
+        File.setText("File");
 
-        jMenuItem5.setText("New Project. . .");
-        jMenu1.add(jMenuItem5);
+        New.setText("New Project. . .");
+        File.add(New);
 
-        jMenuItem6.setText("Open Project. . .");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        Open.setText("Open Project. . .");
+        Open.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                OpenActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem6);
+        File.add(Open);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(File);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        Edit.setText("Edit");
+        jMenuBar1.add(Edit);
 
-        jMenu3.setText("Options");
+        Options.setText("Options");
 
-        jMenuItem1.setText("Record / Playback");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        RP.setText("Record / Playback");
+        RP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                RPActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem1);
+        Options.add(RP);
 
-        jMenuItem2.setText("Post-Play Evaluation");
-        jMenu3.add(jMenuItem2);
+        PPE.setText("Post-Play Evaluation");
+        Options.add(PPE);
 
-        jMenuItem3.setText("Song Lessons");
-        jMenu3.add(jMenuItem3);
+        SL.setText("Song Lessons");
+        Options.add(SL);
 
-        jMenuItem4.setText("Song Sharing");
-        jMenu3.add(jMenuItem4);
+        SS.setText("Song Sharing");
+        SS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SSActionPerformed(evt);
+            }
+        });
+        Options.add(SS);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(Options);
 
         setJMenuBar(jMenuBar1);
 
@@ -147,7 +152,7 @@ public class MuZikUI extends javax.swing.JFrame {
      * This allows the button to be pressed, and the recording option pops up.
      * MUST MAKE NEW PACKAGE TO USE METHODS FROM OTHER CLASSES...
      */
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void bRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRPActionPerformed
         JFrame RecordPlayback = new PlayMidi();
         RecordPlayback.setLocationRelativeTo(null);
         // RecordPlayback.pack();
@@ -156,21 +161,21 @@ public class MuZikUI extends javax.swing.JFrame {
         RecordPlayback.setSize(300, 300);
         RecordPlayback.setLocationRelativeTo(null);
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_bRPActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void bPPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPPEActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_bPPEActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void bSLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSLActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_bSLActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void bSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_bSSActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void RPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RPActionPerformed
         JFrame RecordPlayback = new PlayMidi();
         RecordPlayback.setLocationRelativeTo(null);
         // RecordPlayback.pack();
@@ -178,11 +183,15 @@ public class MuZikUI extends javax.swing.JFrame {
         // RecordPlayback.setLocation(35,225);
         RecordPlayback.setSize(300, 300);
         RecordPlayback.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_RPActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void OpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_OpenActionPerformed
+
+    private void SSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,20 +229,20 @@ public class MuZikUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JMenu Edit;
+    private javax.swing.JMenu File;
+    private javax.swing.JMenuItem New;
+    private javax.swing.JMenuItem Open;
+    private javax.swing.JMenu Options;
+    private javax.swing.JMenuItem PPE;
+    private javax.swing.JMenuItem RP;
+    private javax.swing.JMenuItem SL;
+    private javax.swing.JMenuItem SS;
+    private javax.swing.JButton bPPE;
+    private javax.swing.JButton bRP;
+    private javax.swing.JButton bSL;
+    private javax.swing.JButton bSS;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     // End of variables declaration//GEN-END:variables
 }
