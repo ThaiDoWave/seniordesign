@@ -97,7 +97,9 @@ public class MuZikUI extends javax.swing.JFrame {
         JFrame RecordPlayback = new PlayMidi();
         RecordPlayback.pack();
         RecordPlayback.show();
-        RecordPlayback.setLocationRelativeTo(null);
+        RecordPlayback.setLocation(35,225);
+        RecordPlayback.setSize(745,375);
+        // RecordPlayback.setLocationRelativeTo(null);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
