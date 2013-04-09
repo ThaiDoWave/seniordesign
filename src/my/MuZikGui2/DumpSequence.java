@@ -92,7 +92,7 @@ PrintStream printStream = new PrintStream(new FileOutputStream(fileName, append)
                                     autoflush);
 
                   System.setOut(printStream);
-                 String	strFilename = "src/my/MuZikGui2/eagles-hotelcalifornia.mid";
+                 String	strFilename = "src/my/MuZikGui2/twinkle-twinkle.mid";
 		File	midiFile = new File(strFilename);
 
 		/*

@@ -96,8 +96,6 @@ public class MuZikUI extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, -40, 800, 680);
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
-
         File.setText("File");
 
         New.setText("New Project. . .");
