@@ -4,12 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.sound.sampled.*;
 
 public class PlayMidi extends JFrame {
 
   protected boolean running;
   ByteArrayOutputStream out;
+  Runnable currentRunner; 
 
   public PlayMidi() {
     super("Record / Playback");
@@ -21,14 +24,17 @@ public class PlayMidi extends JFrame {
     final JButton capture = new JButton("Record");
     final JButton stop = new JButton("Stop");
     final JButton play = new JButton("Play");
+    final JButton save = new JButton("Save"); 
 
     capture.setFont(bBold);
     stop.setFont(bBold);
     play.setFont(bBold);
+    save.setFont(bBold);
     
     capture.setEnabled(true);
     stop.setEnabled(false);
     play.setEnabled(false);
+    save.setEnabled(false);
 
     ActionListener captureListener = 
         new ActionListener() {
@@ -36,6 +42,7 @@ public class PlayMidi extends JFrame {
         capture.setEnabled(false);
         stop.setEnabled(true);
         play.setEnabled(false);
+        save.setEnabled(false);
         captureAudio();
       }
     };
@@ -48,11 +55,12 @@ public class PlayMidi extends JFrame {
         capture.setEnabled(true);
         stop.setEnabled(false);
         play.setEnabled(true);
+        save.setEnabled(true);
         running = false;
       }
     };
     stop.addActionListener(stopListener);
-    content.add(stop, BorderLayout.CENTER);
+    content.add(stop, BorderLayout.SOUTH);
 
     ActionListener playListener = 
         new ActionListener() {
@@ -61,7 +69,26 @@ public class PlayMidi extends JFrame {
       }
     };
     play.addActionListener(playListener);
-    content.add(play, BorderLayout.SOUTH);
+    content.add(play, BorderLayout.EAST);
+    
+     ActionListener saveListener = 
+        new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        capture.setEnabled(true);
+        stop.setEnabled(false);
+        play.setEnabled(true);
+        save.setEnabled(false);
+          try {
+              saveAudio();
+          } catch (FileNotFoundException ex) {
+              Logger.getLogger(PlayMidi.class.getName()).log(Level.SEVERE, null, ex);
+          } catch (IOException ex) {
+              Logger.getLogger(PlayMidi.class.getName()).log(Level.SEVERE, null, ex);
+          }
+      }
+    };
+    save.addActionListener(saveListener);
+    content.add(save, BorderLayout.WEST);
   }
 
   private void captureAudio() {
@@ -142,14 +169,37 @@ public class PlayMidi extends JFrame {
           }
         }
       };
+      currentRunner=runner; 
       Thread playThread = new Thread(runner);
       playThread.start();
-    } catch (LineUnavailableException e) {
+    } 
+    catch (LineUnavailableException e) {
       System.err.println("Line unavailable: " + e);
       System.exit(-4);
     } 
   }
 
+   private void saveAudio() throws FileNotFoundException, IOException {
+       
+   byte audio[] = out.toByteArray();
+      InputStream b_in = 
+        new ByteArrayInputStream(audio);
+      
+       AudioFormat format = getFormat();
+        DataOutputStream dos = new DataOutputStream(new FileOutputStream(
+                "src/my/MuZikGui2/file.wav"));
+        dos.write(audio);
+        //AudioFormat format = new AudioFormat(8000f, 16, 1, true, false);
+        AudioInputStream stream = new AudioInputStream(b_in, format,
+                audio.length);
+        File file = new File("src/my/MuZikGui2/file.wav");
+        AudioSystem.write(stream, AudioFileFormat.Type.WAVE, file);
+      
+     
+      
+   
+   }
+  
   private AudioFormat getFormat() {
     float sampleRate = 8000;
     int sampleSizeInBits = 8;
