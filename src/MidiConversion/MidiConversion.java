@@ -19,7 +19,7 @@ public class MidiConversion {
     public static final int NOTE_ON = 0x90;
     public static final int NOTE_OFF = 0x80;
     public static final String[] NOTE_NAMES = {"C", "Cs", "D", "Ds", "E", "F", "Fs", "G", "Gs", "A", "As", "B"};
-    public static final String[][] song = new String[100][2];
+    public static final String[][] song = new String[200][2];
     
     public static void main(String[] args) throws Exception {
     	
