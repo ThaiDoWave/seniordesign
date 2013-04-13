@@ -5,6 +5,7 @@
 package my.MuZikGui2;
 
 import PlayMidi.PlayMidi;
+import ComboBox.ComboBox;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -50,6 +51,7 @@ public class MuZikUI extends javax.swing.JFrame {
         SS = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MuZik Learning Application");
         getContentPane().setLayout(null);
 
         bRP.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -128,6 +130,11 @@ public class MuZikUI extends javax.swing.JFrame {
         Options.add(PPE);
 
         SL.setText("Song Lessons");
+        SL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SLActionPerformed(evt);
+            }
+        });
         Options.add(SL);
 
         SS.setText("Song Sharing");
@@ -162,11 +169,13 @@ public class MuZikUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bRPActionPerformed
 
     private void bPPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPPEActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_bPPEActionPerformed
 
     private void bSLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSLActionPerformed
-        // TODO add your handling code here:
+        ComboBox SongLesson = new ComboBox();
+        ComboBox SongFrame = new ComboBox();
+        SongLesson.setFrame(SongFrame, 250, 150);
+
     }//GEN-LAST:event_bSLActionPerformed
 
     private void bSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSSActionPerformed
@@ -190,6 +199,12 @@ public class MuZikUI extends javax.swing.JFrame {
     private void SSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SSActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SSActionPerformed
+
+    private void SLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SLActionPerformed
+        ComboBox SongLesson = new ComboBox();
+        ComboBox SongFrame = new ComboBox();
+        SongLesson.setFrame(SongFrame, 250, 150);
+    }//GEN-LAST:event_SLActionPerformed
 
     /**
      * @param args the command line arguments
