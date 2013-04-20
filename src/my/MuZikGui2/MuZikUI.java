@@ -5,6 +5,7 @@
 package my.MuZikGui2;
 
 import PlayMidi.PlayMidi;
+import MidiConversion.SerialTest;
 import ComboBox.ComboBox;
 import java.applet.*;
 import java.awt.*;
@@ -210,6 +211,18 @@ public class MuZikUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        SerialTest main = new SerialTest();
+		main.initialize();
+		Thread t=new Thread() {
+			public void run() {
+				//the following line will keep this app alive for 1000 seconds,
+				//waiting for events to occur and responding to them (printing incoming messages to console).
+				try {Thread.sleep(1000000);} catch (InterruptedException ie) {}
+			}
+		};
+		t.start();
+		System.out.println("Started");
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
