@@ -11,6 +11,7 @@ import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import MidiConversion.Global;
 
 /**
  *
@@ -36,9 +37,7 @@ public class MuZikUI extends javax.swing.JFrame {
     private void initComponents() {
 
         bRP = new javax.swing.JButton();
-        bPPE = new javax.swing.JButton();
         bSL = new javax.swing.JButton();
-        bSS = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         File = new javax.swing.JMenu();
@@ -47,57 +46,39 @@ public class MuZikUI extends javax.swing.JFrame {
         Edit = new javax.swing.JMenu();
         Options = new javax.swing.JMenu();
         RP = new javax.swing.JMenuItem();
-        PPE = new javax.swing.JMenuItem();
         SL = new javax.swing.JMenuItem();
-        SS = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MuZik Learning Application");
         getContentPane().setLayout(null);
 
-        bRP.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        bRP.setFont(new java.awt.Font("Mangal", 0, 20)); // NOI18N
         bRP.setText("Record / Playback");
+        bRP.setToolTipText("<html>Allows the user to record their playing, giving the options <br>\nto save their recording as a WAV file and/or play the recording.");
+        bRP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bRPActionPerformed(evt);
             }
         });
         getContentPane().add(bRP);
-        bRP.setBounds(250, 30, 200, 40);
+        bRP.setBounds(390, 80, 240, 100);
 
-        bPPE.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        bPPE.setText("Post-Play Evaluation");
-        bPPE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bPPEActionPerformed(evt);
-            }
-        });
-        getContentPane().add(bPPE);
-        bPPE.setBounds(490, 30, 200, 40);
-
-        bSL.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        bSL.setFont(new java.awt.Font("Mangal", 0, 20)); // NOI18N
         bSL.setText("Song Lessons");
+        bSL.setToolTipText("<html>Allows the user to choose a song to learn through<br> LED step-by-step guidance on the eRecorder flute.");
+        bSL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bSL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bSLActionPerformed(evt);
             }
         });
         getContentPane().add(bSL);
-        bSL.setBounds(250, 90, 200, 40);
+        bSL.setBounds(390, 210, 240, 100);
 
-        bSS.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        bSS.setText("Song Sharing");
-        bSS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bSSActionPerformed(evt);
-            }
-        });
-        getContentPane().add(bSS);
-        bSS.setBounds(490, 90, 200, 40);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/MuZikGui2/MuzikInterfaceUpdated.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/MuZikGui2/treble.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -40, 800, 680);
+        jLabel1.setBounds(0, -140, 800, 680);
 
         File.setText("File");
 
@@ -127,9 +108,6 @@ public class MuZikUI extends javax.swing.JFrame {
         });
         Options.add(RP);
 
-        PPE.setText("Post-Play Evaluation");
-        Options.add(PPE);
-
         SL.setText("Song Lessons");
         SL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,19 +116,11 @@ public class MuZikUI extends javax.swing.JFrame {
         });
         Options.add(SL);
 
-        SS.setText("Song Sharing");
-        SS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SSActionPerformed(evt);
-            }
-        });
-        Options.add(SS);
-
         jMenuBar1.add(Options);
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(816, 638));
+        setSize(new java.awt.Dimension(714, 458));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -169,19 +139,12 @@ public class MuZikUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bRPActionPerformed
 
-    private void bPPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPPEActionPerformed
-    }//GEN-LAST:event_bPPEActionPerformed
-
     private void bSLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSLActionPerformed
         ComboBox SongLesson = new ComboBox();
         ComboBox SongFrame = new ComboBox();
         SongLesson.setFrame(SongFrame, 250, 150);
 
     }//GEN-LAST:event_bSLActionPerformed
-
-    private void bSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bSSActionPerformed
 
     private void RPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RPActionPerformed
         JFrame RecordPlayback = new PlayMidi();
@@ -197,10 +160,6 @@ public class MuZikUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_OpenActionPerformed
 
-    private void SSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SSActionPerformed
-
     private void SLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SLActionPerformed
         ComboBox SongLesson = new ComboBox();
         ComboBox SongFrame = new ComboBox();
@@ -210,19 +169,23 @@ public class MuZikUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+
     public static void main(String args[]) {
-        
+
         SerialTest main = new SerialTest();
-		main.initialize();
-		Thread t=new Thread() {
-			public void run() {
-				//the following line will keep this app alive for 1000 seconds,
-				//waiting for events to occur and responding to them (printing incoming messages to console).
-				try {Thread.sleep(1000000);} catch (InterruptedException ie) {}
-			}
-		};
-		t.start();
-		System.out.println("Started");
+        main.initialize();
+        Thread t = new Thread() {
+            public void run() {
+                //the following line will keep this app alive for 1000 seconds,
+                //waiting for events to occur and responding to them (printing incoming messages to console).
+                try {
+                    Thread.sleep(1000000);
+                } catch (InterruptedException ie) {
+                }
+            }
+        };
+        t.start();
+        System.out.println("Started");
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -249,7 +212,8 @@ public class MuZikUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MuZikUI().setVisible(true);
+                MuZikUI GUI = new MuZikUI();
+                GUI.setVisible(true);
 
             }
         });
@@ -260,14 +224,10 @@ public class MuZikUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem New;
     private javax.swing.JMenuItem Open;
     private javax.swing.JMenu Options;
-    private javax.swing.JMenuItem PPE;
     private javax.swing.JMenuItem RP;
     private javax.swing.JMenuItem SL;
-    private javax.swing.JMenuItem SS;
-    private javax.swing.JButton bPPE;
     private javax.swing.JButton bRP;
     private javax.swing.JButton bSL;
-    private javax.swing.JButton bSS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
