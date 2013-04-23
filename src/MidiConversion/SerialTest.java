@@ -82,6 +82,7 @@ public class SerialTest implements SerialPortEventListener {
                     SerialPort.PARITY_NONE);
 
             // open the streams
+            
             input = new BufferedReader(new InputStreamReader(serialPort.getInputStream()));
             output = serialPort.getOutputStream();
 

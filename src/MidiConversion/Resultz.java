@@ -24,9 +24,9 @@ public class Resultz extends JFrame {
         JLabel textLabel = new JLabel(Global.inputLine);
         textLabel.setHorizontalAlignment(SwingConstants.CENTER);
         add(textLabel);
-        Font bBold = new Font("Times New Roman", Font.BOLD, 30);
+        Font bBold = new Font("segoe script",Font.ITALIC, 30);
 
-        setSize(300, 300);
+        setSize(500, 300);
         textLabel.setFont(bBold);
         setLocationRelativeTo(null);
         show();
