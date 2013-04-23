@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import MidiConversion.Global;
+import MidiConversion.Resultz;
 
 /**
  *
@@ -38,6 +39,8 @@ public class MuZikUI extends javax.swing.JFrame {
 
         bRP = new javax.swing.JButton();
         bSL = new javax.swing.JButton();
+        FingeringChart = new javax.swing.JButton();
+        About = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         File = new javax.swing.JMenu();
@@ -62,7 +65,7 @@ public class MuZikUI extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bRP);
-        bRP.setBounds(390, 80, 240, 100);
+        bRP.setBounds(390, 80, 240, 70);
 
         bSL.setFont(new java.awt.Font("Mangal", 0, 20)); // NOI18N
         bSL.setText("Song Lessons");
@@ -74,7 +77,22 @@ public class MuZikUI extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bSL);
-        bSL.setBounds(390, 210, 240, 100);
+        bSL.setBounds(390, 170, 240, 70);
+
+        FingeringChart.setFont(new java.awt.Font("Mangal", 1, 11)); // NOI18N
+        FingeringChart.setLabel("Fingering Chart");
+        FingeringChart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FingeringChartActionPerformed(evt);
+            }
+        });
+        getContentPane().add(FingeringChart);
+        FingeringChart.setBounds(390, 260, 240, 40);
+
+        About.setFont(new java.awt.Font("Mangal", 1, 11)); // NOI18N
+        About.setLabel("About");
+        getContentPane().add(About);
+        About.setBounds(390, 310, 240, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/MuZikGui2/treble.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -166,6 +184,14 @@ public class MuZikUI extends javax.swing.JFrame {
         SongLesson.setFrame(SongFrame, 250, 150);
     }//GEN-LAST:event_SLActionPerformed
 
+    private void FingeringChartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FingeringChartActionPerformed
+        Resultz pokemon = new Resultz();
+        try{
+        pokemon.createFingerChart();
+        }
+        catch(Exception e){};
+    }//GEN-LAST:event_FingeringChartActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -219,8 +245,10 @@ public class MuZikUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton About;
     private javax.swing.JMenu Edit;
     private javax.swing.JMenu File;
+    private javax.swing.JButton FingeringChart;
     private javax.swing.JMenuItem New;
     private javax.swing.JMenuItem Open;
     private javax.swing.JMenu Options;
